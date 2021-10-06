@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daddy.demo.mapper.NotificationMapper">
+    <insert id="insertNotification" parameterType="com.daddy.demo.entity.POJO.Notification">
+        insert into notification (`type`,senderId,receiverId,`timestamp`,body) values (#{type},#{senderId},#{receiverId},#{timestamp},#{body});
+    </insert>
+    <select id="selectNotificatioznList" parameterType="Integer" resultType="com.daddy.demo.entity.POJO.Notification">
+        select * from notification where receiverId = #{receiverId} and `type` = #{type}
+    </select>
+    <delete id="deleteNotificationById" parameterType="Integer">
+        delete from notification where id = #{id}
+    </delete>
+</mapper>

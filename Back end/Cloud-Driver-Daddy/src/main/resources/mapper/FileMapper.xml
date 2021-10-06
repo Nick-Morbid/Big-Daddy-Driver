@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daddy.demo.mapper.FileMapper">
+    <select id="selectFilesByuId" parameterType="Integer" resultMap="Files">
+        select * from file where uId = #{uId} and `level` = 0
+    </select>
+    <resultMap id="Files" type="com.daddy.demo.entity.BO.Files">
+        <result property="id" column="id"></result>
+        <collection property="children" column="id" javaType="ArrayList" ofType="com.daddy.demo.entity.BO.Files" select="selectChildrenById"></collection>
+    </resultMap>
+    <select id="selectChildrenById" resultMap="Files">
+        select * from file where upId = #{id}
+    </select>
+    <update id="updateFile" parameterType="com.daddy.demo.entity.POJO.File">
+        update file
+        <set>
+            <if test="name!=null and name!=''">
+                `name` = #{name},
+            </if>
+            <if test="state!=null">
+                `state` = #{state},
+            </if>
+                deletetime = #{deletetime}
+        </set>
+        where id = #{id}
+    </update>
+    <insert id="insertFile" parameterType="com.daddy.demo.entity.POJO.File" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into file (`name`,`state`,suffix,`level`,upId,buildtime,uId,`type`,`path` ) values (#{name},#{state},#{suffix},#{level},#{upId},#{buildtime},#{uId},#{type},#{path});
+    </insert>
+    <insert id="insertFiles">
+        insert into file (`name`,`state`,suffix,`level`,upId,buildtime,uId,`type`,`path` ) values
+        <foreach collection="files" item="file" open="(" separator="),(" close=")">
+            #{file.name},#{file.state},#{file.suffix},#{file.level},#{file.upId},#{file.buildtime},#{file.uId},#{file.type},#{file.path}
+        </foreach>
+    </insert>
+    <select id="selectFileById" parameterType="Integer" resultType="com.daddy.demo.entity.POJO.File">
+        select * from file where id = #{id}
+    </select>
+
+    <select id="selectShareFilesByuId" parameterType="Integer" resultMap="shareFiles">
+                select * from file where uId = #{uId} and `level` = 0 and `state` = 1
+    </select>
+    <resultMap id="shareFiles" type="com.daddy.demo.entity.BO.Files">
+        <result property="id" column="id"></result>
+        <collection property="children" column="id" javaType="ArrayList" ofType="com.daddy.demo.entity.BO.Files" select="selectShareChildrenById"></collection>
+    </resultMap>
+    <select id="selectShareChildrenById" resultMap="shareFiles">
+        select * from file where upId = #{id} and `state` = 1
+    </select>
+
+
+    <select id="selectDeleteFilesByuId" parameterType="Integer" resultMap="deleteFiles">
+                select * from file where uId = #{uId} and `level` = 0 and `state` = -1
+    </select>
+    <resultMap id="deleteFiles" type="com.daddy.demo.entity.BO.Files">
+        <result property="id" column="id"></result>
+        <collection property="children" column="id" javaType="ArrayList" ofType="com.daddy.demo.entity.BO.Files" select="selectDeleteChildrenById"></collection>
+    </resultMap>
+    <select id="selectDeleteChildrenById" resultMap="deleteFiles">
+        select * from file where upId = #{id} and `state` = -1
+    </select>
+
+    <select id="selectChildrenFiles" parameterType="Integer" resultType="com.daddy.demo.entity.POJO.File">
+        select * from file where upId = #{id}
+    </select>
+
+</mapper>

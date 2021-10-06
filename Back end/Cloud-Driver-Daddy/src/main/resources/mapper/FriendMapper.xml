@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daddy.demo.mapper.FriendMapper">
+    <select id="selectFriendList" parameterType="Integer" resultType="com.daddy.demo.entity.POJO.User">
+        select u.id,u.name from user u right join friend f on f.friendId = u.id where f.uId = #{id}
+    </select>
+    <insert id="insertFriend" parameterType="com.daddy.demo.entity.POJO.Friend">
+        insert into friend (uId,friendId) values (#{uId},#{friendId});
+    </insert>
+    <delete id="deleteFriend" parameterType="com.daddy.demo.entity.POJO.Friend">
+        delete from friend where uId = #{uId} and friendId = #{friendId}
+    </delete>
+</mapper>

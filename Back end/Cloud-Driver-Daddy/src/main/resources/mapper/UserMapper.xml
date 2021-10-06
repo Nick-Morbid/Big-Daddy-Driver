@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.daddy.demo.mapper.UserMapper">
+    <select id="selectByName" resultType="com.daddy.demo.entity.POJO.User">
+        select * from user where name = #{name }
+    </select>
+    <insert id="insertUser" parameterType="com.daddy.demo.entity.POJO.User">
+        insert into user (`name`,password,`timestamp`) values (#{name },#{password},current_timestamp());
+    </insert>
+
+    <select id="selectList" parameterType="Integer" resultType="com.daddy.demo.entity.POJO.User">
+    select distinct  u.name,u.id from user u left join friend f on f.uId = u.id WHERE u.id!=#{id} and(f.friendId!=#{id} OR  f.friendId IS NULL)
+    </select>
+
+    <select id="SearchUsers" resultType="com.daddy.demo.entity.POJO.User">
+        select distinct  u.name,u.id from user u left join friend f on f.uId = u.id WHERE  u.id!=#{id} and (f.friendId!=#{id} OR  f.friendId IS NULL) and u.name like concat(concat('%',#{name}),'%')
+    </select>
+    <select id="selectById" parameterType="Integer" resultType="com.daddy.demo.entity.POJO.User">
+        select id,name from user where id = #{id}
+    </select>
+</mapper>
