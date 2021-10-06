@@ -1,0 +1,619 @@
+.container1{
+    width: 360px;
+    height: 600px;
+    /*pointer-events: auto;*/
+    transition: 1s;
+    box-sizing: border-box;
+}
+.container2{
+    /*background-size: ;*/
+    width: 420px;
+    height: 700px;
+    /*pointer-events: auto;*/
+    transition: 1s;
+    box-sizing: border-box;
+}
+.logo{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-image: url("../images/logo.png");
+    background-size: 25%,25%;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+/*头部标签样式*/
+.head{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background-image: url("../images/logo.png");
+    background-size: 15%,15%;
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.body1{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: rgb(233,233,233);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 1s;
+    box-sizing: border-box;
+}
+.body2{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: rgb(244,244,244);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 1s;
+}
+.panel1{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    background-color: rgb(233,233,233);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 1s;
+    box-sizing: border-box;
+}
+.panel2{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    background-color: rgb(244,244,244);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 1s;
+}
+
+.title1{
+    color: rgb(192, 118, 117);
+    font-size: 1.35em;
+    font-family: Arial;
+    position: relative;
+    top: 65%;
+
+    transition: 1s;
+}
+
+.title2{
+    color: rgb(192, 118, 117);
+    font-size: 1.8em;
+    font-family: Arial;
+    position: relative;
+    top: 65%;
+    transition: 1s;
+}
+.headtitle1{
+    color: rgb(192, 118, 117);
+    font-size: 1.8em;
+    font-family: Arial;
+    position: relative;
+    top: 35%;
+    transition: 1s;
+}
+.headtitle2{
+    color: rgb(192, 118, 117);
+    font-size: 2.4em;
+    font-family: Arial;
+    position: relative;
+    top: 35%;
+    transition: 1s;
+}
+
+.baseinput{
+    outline-style: none ;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    height: 10%;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Microsoft soft";
+    position: relative;
+    box-sizing: border-box;
+    transition: 1s;
+}
+.baseinput:focus{
+    border-color: #66afe9;
+    outline: 0;
+    transition: 1s;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+.basebtn1{
+    height: 10%;
+    width: 15%;
+    border-radius: 15px;
+    /*border: 3px solid #6ec2ff;*/
+    position: relative;
+    border: 0px;
+    background-color: rgb(96,169,193);
+    color: white;
+    font-size: 16px;
+    font-family: "Microsoft soft";
+    transition: 1s;
+    cursor: pointer;
+}
+.basebtn1:hover,.funcbtn1:hover{
+    background-color: rgb(133,200,222);
+    color: #efefef;
+    transition: 1s;
+}
+.basebtn1:active{
+    background-color: rgb(3, 148, 203);
+    color: #efefef;
+    transition: 0s;
+}
+.basebtn2{
+    height: 10%;
+    width: 15%;
+    border-radius: 15px;
+    position: relative;
+    /*border: 3px solid #6ec2ff;*/
+    border: 0px;
+    background-color: rgb(90,193,137);
+    color: white;
+    font-size: 16px;
+    font-family: "Microsoft soft";
+    transition: 1s;
+    cursor: pointer;
+}
+.basebtn2:hover,.funcbtn2:hover{
+    background-color: rgb(109, 210, 155);
+    color: #efefef;
+    transition: 1s;
+}
+.basebtn2:active{
+    background-color: rgb(2, 169, 78);
+    color: #efefef;
+    transition: 0s;
+}
+.flabel2{
+    font-size: 1.3em;
+    font-family: Arial;
+    position: relative;
+    top: 10%;
+    transition: 1s;
+}
+.flabel1{
+    font-size: 0.975em;
+    font-family: Arial;
+    position: relative;
+    top: 10%;
+    transition: 1s;
+}
+.slabel2{
+    font-size: 1em;
+    font-family: Arial;
+    color: rgb(82,184,221);
+    position: relative;
+    top: 20%;
+    transition: 1s;
+}
+.slabel1{
+    font-size: 0.75em;
+    font-family: Arial;
+    color: rgb(82,184,221);
+    position: relative;
+    top: 20%;
+    transition: 1s;
+}
+
+.funcbtn2{
+    height: 15%;
+    width: 50%;
+    border-radius: 20px;
+    position: relative;
+    top: 35%;
+    border: 0px;
+    background-color: rgb(90,193,137);
+    color: white;
+    font-size: 24px;
+    font-family: "Microsoft soft";
+    transition: 1s;
+    cursor: pointer;
+}
+
+.funcbtn1 {
+    position: relative;
+    background-color: rgb(96,169,193);
+    border: none;
+    font-size: 24px;
+    color: white;
+    height: 15%;
+    width: 50%;
+    border-radius: 20px;
+    font-family: "Microsoft soft";
+    position: relative;
+    top: 30%;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.funcbtn1:after {
+    content: "";
+    background-color: rgb(186, 223, 239);
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.funcbtn1:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+/*文件管理界面的面板*/
+.folderpanel{
+    position: relative;
+    top: 7%;
+    left: 5%;
+    width: 90%;
+    height: 88%;
+    background-color: white;
+    overflow: auto;
+}
+.folder{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/folder.jpg");
+    background-size: 100%,100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    /*border: 3px solid gray;*/
+}
+.file{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/file.jpg");
+    background-size: 70%,70%;
+    background-position: 30%,10%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+.picture{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/picture.jpg");
+    background-position: 40% 25%;
+    /*box-sizing: border-box;*/
+    /*margin-left: 15%;*/
+    /*border: 3px solid gray;*/
+    background-size: 60%,60%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+.folder-item{
+    display: inline-block;
+    position: relative;
+    width: 33%;
+    height: 25%;
+    /*border: 3px solid gray;*/
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+.folderlabel{
+    width: 90%;
+    font-size: 0.6em;
+    font-family:"Microsoft soft";
+    position: absolute;
+    left: 0%;
+    overflow: auto;
+    top: 75%;
+}
+
+.funcbtn3 {
+    position: absolute;
+    display: inline-block;
+    border-radius: 25px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    height: 5%;
+    width: 15%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.funcbtn3 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.funcbtn3 span:after {
+    content: '«';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20%;
+    transition: 0.5s;
+}
+
+.funcbtn3:hover span {
+    padding-left: 20%;
+}
+
+.funcbtn3:hover span:after {
+    opacity: 1;
+    left: 0;
+}
+
+.folderdropdown{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    /*height: 100%;*/
+    right: 0;
+    box-sizing: border-box;
+    /*border: 1px solid gray;*/
+    /*background-color: #cccccc;*/
+}
+.folderdropdown-content{
+    display: none;
+    width: 100%;
+    font-size: 12px;
+    /*background-color: unset;*/
+    opacity:0.4;
+    border: 0;
+}
+.folderdropdown:hover .folderdropdown-content{
+    display: block;
+    z-index: 100;
+}
+.folderdropdown-content:hover{
+    opacity:0.8;
+    transition: 0.3s;
+}
+.folderdropdown-content:active{
+    background-color: gray;
+}
+
+.renameinput{
+    z-index: 100;
+    position: absolute;
+    width: 70%;
+    height: 30%;
+    top: 65.5%;
+    left: 15%;
+    border: 0px;
+    background-color: unset;
+    text-align: center;
+    outline: none;
+    color: red;
+    transition: 0.5s;
+}
+.renameinput:focus{
+    color: black;
+    transition: 0.5s;
+}
+
+.funcbtn4 {
+    position: absolute;
+    display: inline-block;
+    border-radius: 25px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    height: 5%;
+    width: 20%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.funcbtn3:hover,.funcbtn4:hover{
+    background-color: #f17957;
+}
+.funcbtn3:active,.funcbtn4:active{
+    background-color: #bf320b;
+}
+.dialog1{
+    position: absolute;
+    width: 70%;
+    height: 20%;
+    top: 27%;
+    left: 12%;
+    /*border: 3px solid gray;*/
+    border: 3px solid lightgray;
+    box-sizing: border-box;
+    /*z-index: 10;*/
+    border-radius: 15px;
+    /*background:lightgrey;*/
+    background-color: #ececec;
+    /*pointer-events: auto;*/
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: unset;
+    z-index: 1;
+    pointer-events: auto;
+    border-radius: 15px;
+}
+
+.dialog2{
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    border-radius: 15px;
+    background-color: #ececec;
+    box-sizing: border-box;
+    border: 3px solid lightgray;
+}
+.filenamecontainer{
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    left: 25%;
+    top: 20%;
+    /*border: 3px solid gray;*/
+    box-sizing: border-box;
+    overflow: auto;
+    text-align: center;
+}
+
+.filenamelabel{
+    font-size: 1em;
+    font-family: Arial;
+    color: rgb(82,184,221);
+    position: relative;
+    transition: 1s;
+    display: block;
+    margin-bottom: 3%
+}
+.filenamelabel:hover{
+    background-color: white;
+}
+.filenamelabel:active{
+    background-color: lightgray;
+}
+
+.dialog3{
+    position: absolute;
+    width: 80%;
+    height: 64%;
+    top: 15%;
+    left: 10%;
+    border: 3px solid gray;
+    border-radius: 15px;
+    /*background-color: #66afe9;*/
+    background-color: rgb(244,244,244);
+    box-sizing: border-box;
+}
+
+/*好友管理界面的面板*/
+.friendpanel{
+    position: relative;
+    top: 7%;
+    left: 5%;
+    width: 90%;
+    height: 88%;
+    background-color: white;
+    overflow: auto;
+}
+
+.friend{
+    position: relative;
+    /*border: 3px solid gray;*/
+    box-sizing: border-box;
+    height: 15%;
+}
+.friend-icon{
+    background-image: url("../images/user.png");
+    background-size: 50%,50%;
+    background-position: 0,0;background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+}
+.friend-name2{
+     /*border: 3px solid gray;*/
+     position: absolute;
+     width: 35%;
+     top: 22%;
+     left: 15%;
+     box-sizing: border-box;
+     font-size: 1.5em;
+    transition: 1s;
+ }
+.friend-name1{
+    /*border: 3px solid gray;*/
+    position: absolute;
+    width: 35%;
+    top: 22%;
+    left: 15%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    transition: 1s;
+}
+.seatchinput{
+    position: relative;
+    width: 70%;
+    height: 10%;
+    top: 2%;
+    left: 5%;
+    box-sizing: border-box;
+    outline: none;
+    border: 3px solid #bcbcbc;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: "Microsoft soft";
+}
+.funcbtn5{
+    position: absolute;
+    top: 2%;
+    left:75%;
+    width: 20%;
+    height:10% ;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: "Microsoft soft";
+    border: 3px solid #bcbcbc;
+    color: white;
+    background-color: #cccccc;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+    transition: 1s;
+}
+.funcbtn5:hover{
+    background-color: #e0dede;
+    transition: 1s;
+}
+.funcbtn5:active{
+    background-color: #a9a8a8;
+    transition: 0.1s;
+}
+.notificationlabel{
+    position: relative;
+    height: 12%;
+    width: 100%;
+    font-weight: 500;
+    box-sizing: border-box;
+    /*border: 3px solid gray;*/
+    overflow: auto;
+}
